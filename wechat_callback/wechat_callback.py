@@ -13,40 +13,15 @@ app = Flask(__name__)
 
 # === 配置参数区 ===
 # 请将以下参数修改为您在企业微信后台配置的实际参数
-TOKEN = "QB2x90M9aBVa73mB5P4NofknTTQPoE"           # 您在企业微信后台设置的Token
-ENCODING_AES_KEY = "Yz8Y1U6YYYOMNmKiHCBmWSAiaZ1AV3qYsNk1U4tIBuS"  # 您在企业微信后台设置的EncodingAESKey
-CORP_ID = "wwcfb8821435efef70"      # 您的企业ID
+TOKEN = "**********************"           # 您在企业微信后台设置的Token
+ENCODING_AES_KEY = "**************************"  # 您在企业微信后台设置的EncodingAESKey
+CORP_ID = "********************"      # 您的企业ID
 
 # 会话存档配置参数
-FINANCE_CORP_ID = "wwcfb8821435efef70"  # 企业ID，用于会话存档
-FINANCE_SECRET = "tgZikbk9cJ4khVVf1dNeDRS2mWmU-QYh8eEKT2TMVio"  # 会话存档Secret，需要在企业微信后台获取
+FINANCE_CORP_ID = "****************"  # 企业ID，用于会话存档
+FINANCE_SECRET = "************************"  # 会话存档Secret，需要在企业微信后台获取
 RSA_PRIVATE_KEY = """-----BEGIN PRIVATE KEY-----
-MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCvMJ6HbkysQ4P6
-KPKxSQgzpA7bJs4KB5NWdJ2XZHcLJllDUCsEKdDE+oKWcjZ7X1KaCEhHCppSzeXB
-eYvlnxx9I8OfB1+g8nKt3EYLQYsMFupbJngw8W1M3GVVyQnd6CgH+c8EkUenwi25
-5/vDsHR6huc3UvG7Htk0syw0eJrKF+WrePNfPat2fB87qqZyj/Qj1Z1qQsr09R1Z
-DeoL6gUXPvAqSSAZ7ELmKHbJaV+9XCysMceO4rZHdZGSd4olDHjarbwniShT1c6a
-yHgZR8X8lp9O2xRJjHXC9fi58nJIh00jWUqEHGGdSunkr0J6k1lIPH71dihO5/NL
-I4KLudE1AgMBAAECggEAJ7VO8WZ8RX1mICEA5VMm40GXxm+Uuuw9ppZ3E9YHL4VJ
-LTsyDNcHhWY8jComFC+mcthWvZd3JDacEY7huTGnzOt6zwRmVf4uJR8s1ydLg3l8
-NB3Tl1BZlFbONzQCowQYcrpaBHCDe9BE+gLNa20G8bC7HqyTsvSKienkpp4Bg7Wm
-4DyJcfzj+2Z/ckiDYw/DHAt/ax+G5ALl0+4VPWlYVPa7G5hj/LQPts6XOil4VxJI
-xItEUwhTUJ2klsEdZud0hPj18OO02Q1MU4GwNolILXYNESOM+yFbp75zgPgDUdld
-gXrVfpTQdXPl4gXQS1mfjq08o+9XJi63D51MJygPPwKBgQD1jiFgt4AnwZ+8sGcJ
-zX7es/Qxif8M/bLWc1POSonakGjUC3JE/Z8eBDI2XmZBtyTqNItmDqEsVGeoqG9/
-B0e2Mqqp4UhsQwggs3touiAVlPtStVfeRYPj4Hi93SalephEzn6wcKkAXAsCA4yR
-6Z7oK3wD5rMM42Xlcft3FYoiCwKBgQC2pEag/kzQeDch4LgBm6DufeydireAYU1l
-Qfsym4dX0g1nQ1LGPR9SG0SNj5ihHxCdk7bx4YM4OkPolHQLkGSu3U7XZ/6CcJqT
-ELAU9dA02eXB7KEZ3HVwj7Rh7tbyAYu+B8urT6+uLp9Qq8+FuozVaHayeo0uVWza
-LyWnPTUhvwKBgGZSZIw1ytxGLbbl1vnZvI02dYITG8mhCd2czwY+PzVpSZVac7JV
-8PEEFJxdN8UYePRzEsdjPzwGq+82yMcpFHPSpxUFADXEtOVThRA9xtLXcuajFEtV
-skDJr+aF+e2oqTy6w0XonDO/JwMe0XuX2xSp0hKaFnA/bZ1vorabriTDAoGAEhst
-CU7MjKouRQSDGV21UY9YQrH6yRZcVtp4raavfyxKud75uL9ceIZNgH8o0WhD/Gsl
-astBd/SGwOreqjrRUGiOJVqg54uEN2ojGqDX2DV1yojL28V4OwV0C3VjB7DRirA5
-J62JrAnhL10pAIfi6FEn2z+8+Ufst6CO6gpuVv8CgYEA1Ua4J0PFr90mgf6q00v/
-oJGgPdTjela2MO+ZiEKtgtgqo6h/+SDv9vDSyyrh0fJzsflqEfFNpsm/zDLvbVfO
-AWfsDiDPdQb2/Hk6g3yTKQbDZcH32BsqWXo+nt/FxjATxaCAbz2Jv1OJ/0Xpt0BE
-QegvJmqzueDfzhed5eW7Peg=
+********************
 -----END PRIVATE KEY-----"""  # 用于解密encrypt_random_key的RSA私钥
 
 # Linux系统下的路径配置
@@ -633,3 +608,4 @@ def get_group_chat_info(access_token, roomid):
 if __name__ == '__main__':
     # 开发环境下直接运行
     app.run(host='0.0.0.0', port=9530, debug=True)
+
